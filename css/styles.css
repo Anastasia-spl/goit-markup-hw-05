@@ -167,27 +167,13 @@ img {
   margin-right: 50px;
 }
 
-.icon-envelope {
-  margin-right: 10px;
-
-  --color4: var(--primary-text-color);
-}
-
+.icon-envelope, 
 .icon-phone {
-  width: 10px;
-  height: 16px;
   margin-right: 10px;
 
-  --color3: var(--primary-text-color);
+  fill: currentColor;
 }
 
-.h-contacts:hover .icon-envelope,
-.h-contacts:focus .icon-envelope,
-.h-contacts:hover .icon-phone,
-.h-contacts:focus .icon-phone {
-  --color3: var(--accent-color);
-  --color4: var(--accent-color);
-}
 
 /* тренировка для псевдоэлементов
 
@@ -442,24 +428,22 @@ img {
   align-items: center;
   width: 44px;
   height: 44px;
+  color: var(--icon-color);
 }
 
 .social-icon {
   width: 20px;
   height: 20px;
-  --color3: var(--icon-color);
+  fill: currentColor;
 }
 
 .social-link:hover,
 .social-link:focus {
   border-radius: 50%;
   background-color: var(--accent-color);
+  color: var(--white-color);
 }
 
-.social-link:hover .social-icon,
-.social-link:focus .social-icon {
-  --color3: var(--white-color);
-}
 
 /* Clients section */
 
@@ -479,11 +463,13 @@ img {
   height: 90px;
   border: 1px solid var(--icon-color);
   border-radius: 4px;
+  color: var(--icon-color);
 }
 
 .client-link:hover,
 .client-link:focus {
   border-color: var(--accent-color);
+  color: var(--accent-color);
 }
 
 .client-item > .flexbox {
@@ -492,15 +478,9 @@ img {
 }
 
 .client-icon {
-  --color1: var(--icon-color);
-  --color2: var(--icon-color);
+  fill: currentColor;
 }
 
-.client-link:hover .client-icon,
-.client-link:hover .client-icon {
-  --color1: var(--accent-color);
-  --color2: var(--accent-color);
-}
 
 /* Footer section */
 
@@ -579,7 +559,7 @@ img {
 .join-aside .social-icon {
   width: 20px;
   height: 20px;
-  --color1: var(--white-color);
+  fill: currentColor;
 }
 
 .social-link:hover,
@@ -713,6 +693,11 @@ img {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .modal {
   position: absolute;
   min-width: 528px;
@@ -726,4 +711,24 @@ img {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
+  padding: 40px;
+}
+
+.close-icon-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  width: 30px;
+  height: 30px;
+  padding: 6px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--white-color);
+  color: var(--top-logo);
+}
+
+.close-icon {
+  fill: currentColor;
 }
